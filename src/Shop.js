@@ -1,14 +1,16 @@
 import React from 'react'
 import ShopTile from "./ShopTile"
+import PotionTile from "./PotionTile"
+
 
 const Shop = (props) => {
 
   const renderPotions = () => {
     return props.potions.map(potion => {
       return ( 
-        <ShopTile potion={potion} addToInventory={props.addToInventory}>
+        <PotionTile potion={potion} addToInventory={props.addToInventory}>
           <h4 className="potion-header">{potion.name}</h4>
-        </ShopTile>
+        </PotionTile>
       )
     })
   }
